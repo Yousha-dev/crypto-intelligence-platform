@@ -112,7 +112,7 @@ Evaluates content based on:
 ## 🛠️ Technology Stack
 
 ### Backend
-- **Framework**: Django 4.0+, Django REST Framework, Django Channels
+- **Framework**: Django 5.0+, Django REST Framework, Django Channels
 - **Task Queue**: Celery with Redis broker
 - **WebSockets**: Django Channels for real-time communication
 
