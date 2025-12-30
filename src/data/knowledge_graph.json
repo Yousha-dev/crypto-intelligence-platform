@@ -1,0 +1,1327 @@
+{
+  "entities": {
+    "bitcoin": {
+      "id": "bitcoin",
+      "name": "BTC",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "ethereum": {
+      "id": "ethereum",
+      "name": "ETH",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "binance_coin": {
+      "id": "binance_coin",
+      "name": "BNB",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "solana": {
+      "id": "solana",
+      "name": "SOL",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "cardano": {
+      "id": "cardano",
+      "name": "ADA",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "ripple": {
+      "id": "ripple",
+      "name": "XRP",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "dogecoin": {
+      "id": "dogecoin",
+      "name": "DOGE",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "polkadot": {
+      "id": "polkadot",
+      "name": "DOT",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "avalanche": {
+      "id": "avalanche",
+      "name": "AVAX",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "chainlink": {
+      "id": "chainlink",
+      "name": "LINK",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "binance": {
+      "id": "binance",
+      "name": "Binance",
+      "entity_type": "exchange",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "coinbase": {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "entity_type": "exchange",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "kraken": {
+      "id": "kraken",
+      "name": "Kraken",
+      "entity_type": "exchange",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "ftx": {
+      "id": "ftx",
+      "name": "FTX",
+      "entity_type": "exchange",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "okx": {
+      "id": "okx",
+      "name": "OKX",
+      "entity_type": "exchange",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "sec": {
+      "id": "sec",
+      "name": "SEC",
+      "entity_type": "regulator",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "cftc": {
+      "id": "cftc",
+      "name": "CFTC",
+      "entity_type": "regulator",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "federal_reserve": {
+      "id": "federal_reserve",
+      "name": "Federal Reserve",
+      "entity_type": "central_bank",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "blackrock": {
+      "id": "blackrock",
+      "name": "BlackRock",
+      "entity_type": "institution",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "grayscale": {
+      "id": "grayscale",
+      "name": "Grayscale",
+      "entity_type": "institution",
+      "properties": {
+        "is_base_entity": true
+      },
+      "created_at": "2025-12-11T06:16:13.460481+00:00",
+      "updated_at": "2025-12-11T06:16:13.460481+00:00"
+    },
+    "bitcoin_surges_past": {
+      "id": "bitcoin_surges_past",
+      "name": "Bitcoin Surges Past",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_001"
+      },
+      "created_at": "2025-12-11T06:22:12.080315+00:00",
+      "updated_at": "2025-12-11T06:22:12.080315+00:00"
+    },
+    "fidelity": {
+      "id": "fidelity",
+      "name": "Fidelity",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_001"
+      },
+      "created_at": "2025-12-11T06:22:12.080315+00:00",
+      "updated_at": "2025-12-11T06:22:12.080315+00:00"
+    },
+    "securities_and_exchange_commission": {
+      "id": "securities_and_exchange_commission",
+      "name": "Securities And Exchange Commission",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_003"
+      },
+      "created_at": "2025-12-11T06:22:23.558709+00:00",
+      "updated_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    "the_securities_and_exchange_commission": {
+      "id": "the_securities_and_exchange_commission",
+      "name": "The Securities And Exchange Commission",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_003"
+      },
+      "created_at": "2025-12-11T06:22:23.558709+00:00",
+      "updated_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    "gary_gensler": {
+      "id": "gary_gensler",
+      "name": "Gary Gensler",
+      "entity_type": "person",
+      "properties": {
+        "discovered_from": "mock_cp_003"
+      },
+      "created_at": "2025-12-11T06:22:23.558709+00:00",
+      "updated_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    "ethereum_network_upgrade_reduces_gas_fees": {
+      "id": "ethereum_network_upgrade_reduces_gas_fees",
+      "name": "Ethereum Network Upgrade Reduces Gas Fees",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_002"
+      },
+      "created_at": "2025-12-11T06:22:23.788736+00:00",
+      "updated_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    "eth_denver": {
+      "id": "eth_denver",
+      "name": "Eth Denver",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cp_002"
+      },
+      "created_at": "2025-12-11T06:22:23.788736+00:00",
+      "updated_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    "vitalik_buterin": {
+      "id": "vitalik_buterin",
+      "name": "Vitalik Buterin",
+      "entity_type": "person",
+      "properties": {
+        "discovered_from": "mock_cp_002"
+      },
+      "created_at": "2025-12-11T06:22:23.788736+00:00",
+      "updated_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    "global_banks_explore_cryptocurrency_custody_services": {
+      "id": "global_banks_explore_cryptocurrency_custody_services",
+      "name": "Global Banks Explore Cryptocurrency Custody Services",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "5567326610810605610"
+      },
+      "created_at": "2025-12-11T06:22:24.030688+00:00",
+      "updated_at": "2025-12-11T06:22:24.030688+00:00"
+    },
+    "bitcoin_technical_analysis:_key_support": {
+      "id": "bitcoin_technical_analysis:_key_support",
+      "name": "Bitcoin Technical Analysis: Key Support",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cc_001"
+      },
+      "created_at": "2025-12-11T06:22:24.287697+00:00",
+      "updated_at": "2025-12-11T06:22:24.287697+00:00"
+    },
+    "ethereum_staking_rewards_attract_institutional_interest": {
+      "id": "ethereum_staking_rewards_attract_institutional_interest",
+      "name": "Ethereum Staking Rewards Attract Institutional Interest",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_cc_002"
+      },
+      "created_at": "2025-12-11T06:22:24.383421+00:00",
+      "updated_at": "2025-12-11T06:22:24.383421+00:00"
+    },
+    "ltc": {
+      "id": "ltc",
+      "name": "LTC",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "discovered_from": "-4963444326254288943"
+      },
+      "created_at": "2025-12-11T06:22:24.465725+00:00",
+      "updated_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    "irs": {
+      "id": "irs",
+      "name": "IRS",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "-4963444326254288943"
+      },
+      "created_at": "2025-12-11T06:22:24.465725+00:00",
+      "updated_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    "milestone": {
+      "id": "milestone",
+      "name": "Milestone",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "-4963444326254288943"
+      },
+      "created_at": "2025-12-11T06:22:24.465725+00:00",
+      "updated_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    "dai": {
+      "id": "dai",
+      "name": "DAI",
+      "entity_type": "cryptocurrency",
+      "properties": {
+        "discovered_from": "mock_twitter_001"
+      },
+      "created_at": "2025-12-11T06:22:24.725330+00:00",
+      "updated_at": "2025-12-11T06:22:24.725330+00:00"
+    },
+    "k,_resistance_$": {
+      "id": "k,_resistance_$",
+      "name": "K, Resistance $",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_twitter_001"
+      },
+      "created_at": "2025-12-11T06:22:24.725330+00:00",
+      "updated_at": "2025-12-11T06:22:24.725330+00:00"
+    },
+    "moon": {
+      "id": "moon",
+      "name": "MOON",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_twitter_003"
+      },
+      "created_at": "2025-12-11T06:22:24.956798+00:00",
+      "updated_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    "bitcoin_technical_analysis_-_strong_support": {
+      "id": "bitcoin_technical_analysis_-_strong_support",
+      "name": "Bitcoin Technical Analysis - Strong Support",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_reddit_001"
+      },
+      "created_at": "2025-12-11T06:22:24.956798+00:00",
+      "updated_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    "k,_resistance": {
+      "id": "k,_resistance",
+      "name": "K, Resistance",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_reddit_001"
+      },
+      "created_at": "2025-12-11T06:22:24.956798+00:00",
+      "updated_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    "ethereum_2.0_staking_guide_-_everything_you_need_to_know": {
+      "id": "ethereum_2.0_staking_guide_-_everything_you_need_to_know",
+      "name": "Ethereum 2.0 Staking Guide - Everything You Need To Know",
+      "entity_type": "organization",
+      "properties": {
+        "discovered_from": "mock_reddit_002"
+      },
+      "created_at": "2025-12-11T06:22:24.956798+00:00",
+      "updated_at": "2025-12-11T06:22:24.956798+00:00"
+    }
+  },
+  "relationships": [
+    {
+      "source_id": "fidelity",
+      "target_id": "blackrock",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:12.080315+00:00"
+    },
+    {
+      "source_id": "fidelity",
+      "target_id": "bitcoin_surges_past",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080315+00:00"
+    },
+    {
+      "source_id": "fidelity",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080315+00:00"
+    },
+    {
+      "source_id": "fidelity",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "blackrock",
+      "target_id": "bitcoin_surges_past",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "blackrock",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "blackrock",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "bitcoin_surges_past",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "bitcoin_surges_past",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:12.080859+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "gary_gensler",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "the_securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "securities_and_exchange_commission",
+      "target_id": "gary_gensler",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "securities_and_exchange_commission",
+      "target_id": "the_securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "gary_gensler",
+      "target_id": "the_securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:23.558709+00:00"
+    },
+    {
+      "source_id": "eth_denver",
+      "target_id": "ethereum",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "eth_denver",
+      "target_id": "ethereum_network_upgrade_reduces_gas_fees",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "eth_denver",
+      "target_id": "vitalik_buterin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "ethereum",
+      "target_id": "ethereum_network_upgrade_reduces_gas_fees",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "ethereum",
+      "target_id": "vitalik_buterin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "ethereum_network_upgrade_reduces_gas_fees",
+      "target_id": "vitalik_buterin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 4.0,
+      "created_at": "2025-12-11T06:22:23.788736+00:00"
+    },
+    {
+      "source_id": "solana",
+      "target_id": "global_banks_explore_cryptocurrency_custody_services",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "5567326610810605610",
+        "content_title": "Global Banks Explore Cryptocurrency Custody Services"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.030688+00:00"
+    },
+    {
+      "source_id": "bitcoin_technical_analysis:_key_support",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cc_001",
+        "content_title": "Bitcoin Technical Analysis: Key Support at $95,000"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.287697+00:00"
+    },
+    {
+      "source_id": "ethereum",
+      "target_id": "ethereum_staking_rewards_attract_institutional_interest",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cc_002",
+        "content_title": "Ethereum Staking Rewards Attract Institutional Interest"
+      },
+      "weight": 4.0,
+      "created_at": "2025-12-11T06:22:24.383421+00:00"
+    },
+    {
+      "source_id": "irs",
+      "target_id": "milestone",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "irs",
+      "target_id": "ltc",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "irs",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "milestone",
+      "target_id": "ltc",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 4.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "milestone",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 4.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "ltc",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 4.0,
+      "created_at": "2025-12-11T06:22:24.465725+00:00"
+    },
+    {
+      "source_id": "k,_resistance_$",
+      "target_id": "dai",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T06:22:24.725330+00:00"
+    },
+    {
+      "source_id": "k,_resistance_$",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.725330+00:00"
+    },
+    {
+      "source_id": "dai",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:24.725330+00:00"
+    },
+    {
+      "source_id": "k,_resistance",
+      "target_id": "bitcoin_technical_analysis_-_strong_support",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    {
+      "source_id": "k,_resistance",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    {
+      "source_id": "bitcoin_technical_analysis_-_strong_support",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    {
+      "source_id": "ethereum_2.0_staking_guide_-_everything_you_need_to_know",
+      "target_id": "ethereum",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_002",
+        "content_title": "Ethereum 2.0 Staking Guide - Everything You Need to Know"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T06:22:24.956798+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "bitcoin",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "blackrock",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "bitcoin_surges_past",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "sec",
+      "target_id": "fidelity",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "blackrock",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "bitcoin_surges_past",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "fidelity",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "blackrock",
+      "target_id": "fidelity",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "bitcoin_surges_past",
+      "target_id": "fidelity",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:39.703989+00:00"
+    },
+    {
+      "source_id": "securities_and_exchange_commission",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.478802+00:00"
+    },
+    {
+      "source_id": "gary_gensler",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.478802+00:00"
+    },
+    {
+      "source_id": "the_securities_and_exchange_commission",
+      "target_id": "sec",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.478802+00:00"
+    },
+    {
+      "source_id": "ethereum_network_upgrade_reduces_gas_fees",
+      "target_id": "eth_denver",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.525373+00:00"
+    },
+    {
+      "source_id": "ethereum_network_upgrade_reduces_gas_fees",
+      "target_id": "ethereum",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.525373+00:00"
+    },
+    {
+      "source_id": "vitalik_buterin",
+      "target_id": "eth_denver",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.525373+00:00"
+    },
+    {
+      "source_id": "vitalik_buterin",
+      "target_id": "ethereum",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.525373+00:00"
+    },
+    {
+      "source_id": "global_banks_explore_cryptocurrency_custody_services",
+      "target_id": "solana",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "5567326610810605610",
+        "content_title": "Global Banks Explore Cryptocurrency Custody Services"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.563871+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "bitcoin_technical_analysis:_key_support",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cc_001",
+        "content_title": "Bitcoin Technical Analysis: Key Support at $95,000"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.592033+00:00"
+    },
+    {
+      "source_id": "milestone",
+      "target_id": "irs",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.642654+00:00"
+    },
+    {
+      "source_id": "ltc",
+      "target_id": "irs",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.642654+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "irs",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "-4963444326254288943",
+        "content_title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.642654+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "k,_resistance_$",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.695302+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "dai",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.695302+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "bitcoin_technical_analysis_-_strong_support",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.726557+00:00"
+    },
+    {
+      "source_id": "bitcoin",
+      "target_id": "k,_resistance",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.726557+00:00"
+    },
+    {
+      "source_id": "bitcoin_technical_analysis_-_strong_support",
+      "target_id": "k,_resistance",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_001",
+        "content_title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K"
+      },
+      "weight": 1.0,
+      "created_at": "2025-12-11T07:07:51.726557+00:00"
+    },
+    {
+      "source_id": "ethereum",
+      "target_id": "ethereum_2.0_staking_guide_-_everything_you_need_to_know",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_reddit_002",
+        "content_title": "Ethereum 2.0 Staking Guide - Everything You Need to Know"
+      },
+      "weight": 3.0,
+      "created_at": "2025-12-11T07:07:51.726557+00:00"
+    },
+    {
+      "source_id": "bitcoin_surges_past",
+      "target_id": "blackrock",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_001",
+        "content_title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:40.939697+00:00"
+    },
+    {
+      "source_id": "the_securities_and_exchange_commission",
+      "target_id": "gary_gensler",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:51.467942+00:00"
+    },
+    {
+      "source_id": "the_securities_and_exchange_commission",
+      "target_id": "securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:51.467942+00:00"
+    },
+    {
+      "source_id": "gary_gensler",
+      "target_id": "securities_and_exchange_commission",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_003",
+        "content_title": "SEC Announces New Cryptocurrency Regulation Framework"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:51.467942+00:00"
+    },
+    {
+      "source_id": "ethereum",
+      "target_id": "eth_denver",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_cp_002",
+        "content_title": "Ethereum Network Upgrade Reduces Gas Fees by 50%"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:51.501460+00:00"
+    },
+    {
+      "source_id": "dai",
+      "target_id": "k,_resistance_$",
+      "relation_type": "co_mentioned",
+      "properties": {
+        "content_id": "mock_twitter_001",
+        "content_title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev"
+      },
+      "weight": 2.0,
+      "created_at": "2025-12-11T07:13:51.612273+00:00"
+    }
+  ],
+  "events": {
+    "event_mock_cp_001": {
+      "id": "event_mock_cp_001",
+      "event_type": "regulation",
+      "title": "Bitcoin Surges Past $100,000 Following Spot ETF Approval",
+      "description": "Bitcoin reached a new all-time high of $100,000 following the SEC's approval of multiple spot Bitcoin ETFs. Institutional investors are showing unprecedented interest in the cryptocurrency market, with BlackRock and Fidelity leading the charge.",
+      "entities_involved": [
+        "sec",
+        "bitcoin",
+        "bitcoin_surges_past",
+        "fidelity",
+        "blackrock"
+      ],
+      "sentiment": "bullish",
+      "impact_score": 8.827964532470228,
+      "timestamp": "2025-12-11T07:14:10.388578+00:00",
+      "source_articles": [
+        "mock_cp_001"
+      ]
+    },
+    "event_mock_cp_003": {
+      "id": "event_mock_cp_003",
+      "event_type": "regulation",
+      "title": "SEC Announces New Cryptocurrency Regulation Framework",
+      "description": "The Securities and Exchange Commission unveiled new guidelines for cryptocurrency exchanges and token offerings. Gary Gensler emphasized investor protection while promoting innovation.",
+      "entities_involved": [
+        "sec",
+        "the_securities_and_exchange_commission",
+        "gary_gensler",
+        "securities_and_exchange_commission"
+      ],
+      "sentiment": "neutral",
+      "impact_score": 7.682206491609061,
+      "timestamp": "2025-12-11T07:14:10.401358+00:00",
+      "source_articles": [
+        "mock_cp_003"
+      ]
+    },
+    "event_mock_cp_002": {
+      "id": "event_mock_cp_002",
+      "event_type": "product_launch",
+      "title": "Ethereum Network Upgrade Reduces Gas Fees by 50%",
+      "description": "The latest Ethereum upgrade has successfully reduced transaction costs by 50%, making DeFi more accessible to retail investors. Vitalik Buterin announced the milestone during ETH Denver conference.",
+      "entities_involved": [
+        "ethereum",
+        "eth_denver",
+        "ethereum_network_upgrade_reduces_gas_fees",
+        "vitalik_buterin"
+      ],
+      "sentiment": "bullish",
+      "impact_score": 8.758578823249056,
+      "timestamp": "2025-12-11T07:14:10.419280+00:00",
+      "source_articles": [
+        "mock_cp_002"
+      ]
+    },
+    "event_5567326610810605610": {
+      "id": "event_5567326610810605610",
+      "event_type": "regulation",
+      "title": "Global Banks Explore Cryptocurrency Custody Services",
+      "description": "Major global banks are developing cryptocurrency custody solutions to meet growing institutional demand for digital asset services.",
+      "entities_involved": [
+        "global_banks_explore_cryptocurrency_custody_services",
+        "solana"
+      ],
+      "sentiment": "bullish",
+      "impact_score": 6.017121747432498,
+      "timestamp": "2025-12-11T07:14:10.430985+00:00",
+      "source_articles": [
+        "5567326610810605610"
+      ]
+    },
+    "event_mock_cc_001": {
+      "id": "event_mock_cc_001",
+      "event_type": "general_news",
+      "title": "Bitcoin Technical Analysis: Key Support at $95,000",
+      "description": "",
+      "entities_involved": [
+        "bitcoin",
+        "bitcoin_technical_analysis:_key_support"
+      ],
+      "sentiment": "neutral",
+      "impact_score": 6.75059351864126,
+      "timestamp": "2025-12-11T07:14:10.446168+00:00",
+      "source_articles": [
+        "mock_cc_001"
+      ]
+    },
+    "event_mock_cc_002": {
+      "id": "event_mock_cc_002",
+      "event_type": "adoption",
+      "title": "Ethereum Staking Rewards Attract Institutional Interest",
+      "description": "",
+      "entities_involved": [
+        "ethereum",
+        "ethereum_staking_rewards_attract_institutional_interest"
+      ],
+      "sentiment": "bullish",
+      "impact_score": 7.435937820110321,
+      "timestamp": "2025-12-11T07:14:10.451330+00:00",
+      "source_articles": [
+        "mock_cc_002"
+      ]
+    },
+    "event_-4963444326254288943": {
+      "id": "event_-4963444326254288943",
+      "event_type": "market_movement",
+      "title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone",
+      "description": "The total cryptocurrency market capitalization has exceeded $3 trillion for the first time, driven by Bitcoin's rally and altcoin growth.",
+      "entities_involved": [
+        "milestone",
+        "irs",
+        "ltc",
+        "bitcoin"
+      ],
+      "sentiment": "bullish",
+      "impact_score": 6.458716244234004,
+      "timestamp": "2025-12-11T07:14:10.470297+00:00",
+      "source_articles": [
+        "-4963444326254288943"
+      ]
+    },
+    "event_mock_twitter_001": {
+      "id": "event_mock_twitter_001",
+      "event_type": "regulation",
+      "title": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key lev",
+      "description": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key levels: Support $95K, Resistance $105K. The ETF flows are unprecedented - we're seeing $500M+ daily inflows. #Bitcoin #BTC $BTC",
+      "entities_involved": [
+        "dai",
+        "bitcoin",
+        "k,_resistance_$"
+      ],
+      "sentiment": "neutral",
+      "impact_score": 6.107203195349612,
+      "timestamp": "2025-12-11T07:14:10.502940+00:00",
+      "source_articles": [
+        "mock_twitter_001"
+      ]
+    }
+  }
+}

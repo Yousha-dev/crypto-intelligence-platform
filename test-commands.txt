@@ -1,0 +1,28 @@
+# Setup & Validation
+python manage.py setup_content_system
+
+# Full integration test (News + Social)
+python manage.py test_integration --component all --verbose
+
+# RAG system test
+python manage.py test_rag_system --component all --verbose
+
+# Individual component tests
+python manage.py test_credibility_system --action test_all --verbose
+python manage.py test_sentiment --batch
+python manage.py test_topic_modeling --all
+python manage.py test_text_processing --full
+python manage.py test_hashtag_trending --all
+
+# Content fetching
+python manage.py fetch_content --type all --verbose
+python manage.py fetch_content --type news --verbose
+python manage.py fetch_content --type social --platform reddit --verbose
+
+# Initialize system
+python manage.py init_trading --workers=3
+ 
+# Run multiple orchestrator instances (different cmd windows)
+start "Shard 0" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_0 --phase=both
+start "Shard 1" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_1 --phase=both  
+start "Shard 2" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_2 --phase=both

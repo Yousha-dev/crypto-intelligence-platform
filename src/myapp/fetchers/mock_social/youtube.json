@@ -1,0 +1,167 @@
+[
+    {
+        "video_id": "mock_yt_001",
+        "title": "Bitcoin Price Prediction 2025 - Complete Technical Analysis",
+        "description": "In-depth technical analysis of Bitcoin price action, support and resistance levels, and price predictions for 2025. Covering weekly, daily, and 4-hour timeframes with volume analysis.",
+        "published_at": "2024-12-08T08:00:00Z",
+        "channel_title": "CryptoEducator",
+        "channel_id": "UC_mock_channel_001",
+        "view_count": 250000,
+        "like_count": 12000,
+        "comment_count": 850,
+        "duration_seconds": 2400,
+        "privacy_status": "public",
+        "embeddable": true, 
+        "caption": true,
+        "url": "https://youtube.com/watch?v=mock_yt_001",
+        "thumbnail": "https://i.ytimg.com/vi/mock_yt_001/hqdefault.jpg",
+        "thumbnails": {
+            "default": {"url": "https://i.ytimg.com/vi/mock_yt_001/default.jpg"},
+            "medium": {"url": "https://i.ytimg.com/vi/mock_yt_001/mqdefault.jpg"},
+            "high": {"url": "https://i.ytimg.com/vi/mock_yt_001/hqdefault.jpg"}
+        },
+        "transcript": {
+            "available": true,
+            "language": "en",
+            "text": "Welcome to today's Bitcoin analysis. We'll be looking at the key support and resistance levels... Bitcoin is currently trading at $98,000 with strong support at $95,000...",
+            "word_count": 2500,
+            "auto_generated": false
+        },
+        "channel_info": {
+            "channel_id": "UC_mock_channel_001",
+            "channel_name": "CryptoEducator",
+            "subscriber_count": 750000,
+            "total_view_count": 150000000,
+            "video_count": 1200,
+            "channel_description": "Professional crypto education and analysis since 2017. Daily market updates and technical analysis.",
+            "channel_created": "2017-03-15T00:00:00Z",
+            "channel_age_days": 2825,
+            "country": "US",
+            "subscriber_count_hidden": false,
+            "privacy_status": "public"
+        }
+    },
+    {
+        "video_id": "mock_yt_002",
+        "title": "Ethereum Staking Tutorial 2024 - Step by Step Guide",
+        "description": "Complete guide to staking Ethereum. Covers solo staking, Lido, Rocket Pool, and other staking options. Learn about rewards, risks, and best practices.",
+        "published_at": "2024-12-07T15:00:00Z",
+        "channel_title": "DeFi Academy",
+        "channel_id": "UC_mock_channel_002",
+        "view_count": 180000,
+        "like_count": 9500,
+        "comment_count": 620,
+        "duration_seconds": 1800,
+        "privacy_status": "public",
+        "embeddable": true,
+        "caption": true,
+        "url": "https://youtube.com/watch?v=mock_yt_002",
+        "thumbnail": "https://i.ytimg.com/vi/mock_yt_002/hqdefault.jpg",
+        "thumbnails": {
+            "default": {"url": "https://i.ytimg.com/vi/mock_yt_002/default.jpg"},
+            "medium": {"url": "https://i.ytimg.com/vi/mock_yt_002/mqdefault.jpg"},
+            "high": {"url": "https://i.ytimg.com/vi/mock_yt_002/hqdefault.jpg"}
+        },
+        "transcript": {
+            "available": true,
+            "language": "en",
+            "text": "In this tutorial, we'll walk through everything you need to know about staking Ethereum. First, let's understand what staking is and why it matters...",
+            "word_count": 1800,
+            "auto_generated": false
+        },
+        "channel_info": {
+            "channel_id": "UC_mock_channel_002",
+            "channel_name": "DeFi Academy",
+            "subscriber_count": 420000,
+            "total_view_count": 80000000,
+            "video_count": 650,
+            "channel_description": "Your guide to DeFi. Tutorials, strategies, and analysis.",
+            "channel_created": "2019-06-01T00:00:00Z",
+            "channel_age_days": 2016,
+            "country": "UK",
+            "subscriber_count_hidden": false,
+            "privacy_status": "public"
+        }
+    },
+    {
+        "video_id": "mock_yt_003",
+        "title": "GET RICH QUICK WITH THIS ONE SIMPLE TRICK!!!",
+        "description": "Secret method to make millions in crypto overnight! Don't miss out!",
+        "published_at": "2024-12-08T06:00:00Z",
+        "channel_title": "CryptoMillionaire",
+        "channel_id": "UC_mock_channel_003",
+        "view_count": 500,
+        "like_count": 10,
+        "comment_count": 200,
+        "duration_seconds": 180,
+        "privacy_status": "public",
+        "embeddable": true,
+        "caption": false,
+        "url": "https://youtube.com/watch?v=mock_yt_003",
+        "thumbnail": "https://i.ytimg.com/vi/mock_yt_003/hqdefault.jpg",
+        "thumbnails": {
+            "default": {"url": "https://i.ytimg.com/vi/mock_yt_003/default.jpg"},
+            "medium": {"url": "https://i.ytimg.com/vi/mock_yt_003/mqdefault.jpg"},
+            "high": {"url": "https://i.ytimg.com/vi/mock_yt_003/hqdefault.jpg"}
+        },
+        "transcript": {
+            "available": false,
+            "reason": "No transcript available"
+        },
+        "channel_info": {
+            "channel_id": "UC_mock_channel_003",
+            "channel_name": "CryptoMillionaire",
+            "subscriber_count": 100,
+            "total_view_count": 5000,
+            "video_count": 50,
+            "channel_description": "GET RICH FAST",
+            "channel_created": "2024-11-01T00:00:00Z",
+            "channel_age_days": 37,
+            "country": null,
+            "subscriber_count_hidden": true,
+            "privacy_status": "public"
+        }
+    },
+    {
+        "video_id": "mock_yt_004",
+        "title": "Crypto Market Weekly Recap - December 2024",
+        "description": "Weekly market analysis covering Bitcoin, Ethereum, and top altcoins. Technical analysis, on-chain metrics, and market sentiment breakdown.",
+        "published_at": "2024-12-07T20:00:00Z",
+        "channel_title": "Coin Bureau",
+        "channel_id": "UC_mock_channel_004",
+        "view_count": 520000,
+        "like_count": 28000,
+        "comment_count": 1800,
+        "duration_seconds": 3000,
+        "privacy_status": "public",
+        "embeddable": true,
+        "caption": true,
+        "url": "https://youtube.com/watch?v=mock_yt_004",
+        "thumbnail": "https://i.ytimg.com/vi/mock_yt_004/hqdefault.jpg",
+        "thumbnails": {
+            "default": {"url": "https://i.ytimg.com/vi/mock_yt_004/default.jpg"},
+            "medium": {"url": "https://i.ytimg.com/vi/mock_yt_004/mqdefault.jpg"},
+            "high": {"url": "https://i.ytimg.com/vi/mock_yt_004/hqdefault.jpg"}
+        },
+        "transcript": {
+            "available": true,
+            "language": "en",
+            "text": "Welcome back to another weekly market recap. This week has been incredibly bullish for crypto with Bitcoin reaching new highs...",
+            "word_count": 3200,
+            "auto_generated": false
+        },
+        "channel_info": {
+            "channel_id": "UC_mock_channel_004",
+            "channel_name": "Coin Bureau",
+            "subscriber_count": 2200000,
+            "total_view_count": 500000000,
+            "video_count": 800,
+            "channel_description": "Demystifying cryptocurrency, one video at a time. Education, analysis, and insights.",
+            "channel_created": "2019-01-15T00:00:00Z",
+            "channel_age_days": 2153,
+            "country": "GB",
+            "subscriber_count_hidden": false,
+            "privacy_status": "public"
+        }
+    } 
+]

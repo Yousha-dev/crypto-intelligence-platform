@@ -1,0 +1,197 @@
+[
+    {
+        "id": "mock_twitter_001",
+        "text": "Bitcoin showing strong accumulation patterns. Institutional inflows continue at record pace. Key levels: Support $95K, Resistance $105K. The ETF flows are unprecedented - we're seeing $500M+ daily inflows. #Bitcoin #BTC $BTC",
+        "created_at": "2024-12-08T10:00:00Z",
+        "author_id": "123456789",
+        "conversation_id": "mock_twitter_001",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "in_reply_to_user_id": null,
+        "reply_settings": "everyone",
+        "source": "Twitter Web App",
+        "geo": null,
+        "public_metrics": {
+            "retweet_count": 1800,
+            "like_count": 5200,
+            "reply_count": 340,
+            "quote_count": 120
+        },
+        "context_annotations": [
+            {"domain": {"id": "131", "name": "Cryptocurrency"}, "entity": {"id": "1", "name": "Bitcoin"}}
+        ],
+        "entities": {
+            "hashtags": [{"tag": "Bitcoin"}, {"tag": "BTC"}],
+            "cashtags": [{"tag": "BTC"}],
+            "urls": [],
+            "mentions": [],
+            "media": null
+        },
+        "referenced_tweets": null,
+        "user_info": {
+            "id": "123456789",
+            "username": "verified_crypto_analyst",
+            "name": "Crypto Analyst Pro",
+            "description": "Professional cryptocurrency analyst | 10+ years in financial markets | Not financial advice",
+            "verified": true,
+            "verified_type": "blue",
+            "created_at": "2016-03-15T00:00:00Z",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/analyst_pro.jpg",
+            "url": "https://cryptoanalystpro.com",
+            "protected": false,
+            "public_metrics": {
+                "followers_count": 450000,
+                "following_count": 800,
+                "tweet_count": 25000,
+                "listed_count": 1500
+            },
+            "location": "New York, NY"
+        }
+    },
+    {
+        "id": "mock_twitter_002",
+        "text": "Ethereum gas fees at lowest levels in months! Perfect time to interact with DeFi protocols. The recent upgrade is working as intended. Layer 2 adoption accelerating. #Ethereum #ETH #DeFi",
+        "created_at": "2024-12-08T09:30:00Z",
+        "author_id": "987654321",
+        "conversation_id": "mock_twitter_002",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "in_reply_to_user_id": null,
+        "reply_settings": "everyone",
+        "source": "Twitter Web App",
+        "geo": null,
+        "public_metrics": {
+            "retweet_count": 950,
+            "like_count": 3100,
+            "reply_count": 180,
+            "quote_count": 65
+        },
+        "context_annotations": [
+            {"domain": {"id": "131", "name": "Cryptocurrency"}, "entity": {"id": "2", "name": "Ethereum"}}
+        ],
+        "entities": {
+            "hashtags": [{"tag": "Ethereum"}, {"tag": "ETH"}, {"tag": "DeFi"}],
+            "cashtags": [],
+            "urls": [],
+            "mentions": [],
+            "media": null
+        },
+        "referenced_tweets": null,
+        "user_info": {
+            "id": "987654321",
+            "username": "eth_developer",
+            "name": "Ethereum Dev",
+            "description": "Building on Ethereum since 2017 | Smart contract developer | Open source contributor",
+            "verified": true,
+            "verified_type": "blue",
+            "created_at": "2017-06-20T00:00:00Z",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/eth_dev.jpg",
+            "url": null,
+            "protected": false,
+            "public_metrics": {
+                "followers_count": 125000,
+                "following_count": 1200,
+                "tweet_count": 18000,
+                "listed_count": 800
+            },
+            "location": "San Francisco, CA"
+        }
+    },
+    {
+        "id": "mock_twitter_003",
+        "text": "🚀🚀🚀 $SCAMCOIN TO THE MOON! GUARANTEED 10000X! DM ME FOR INSIDER INFO! Limited spots! Act fast! Don't miss out! 🚀🚀🚀 #crypto #gems #1000x",
+        "created_at": "2024-12-08T08:00:00Z",
+        "author_id": "111222333",
+        "conversation_id": "mock_twitter_003",
+        "lang": "en",
+        "possibly_sensitive": true,
+        "in_reply_to_user_id": null,
+        "reply_settings": "everyone",
+        "source": "Twitter for iPhone",
+        "geo": null,
+        "public_metrics": {
+            "retweet_count": 150,
+            "like_count": 25,
+            "reply_count": 5,
+            "quote_count": 2
+        },
+        "context_annotations": [],
+        "entities": {
+            "hashtags": [{"tag": "crypto"}, {"tag": "gems"}, {"tag": "1000x"}],
+            "cashtags": [{"tag": "SCAMCOIN"}],
+            "urls": [],
+            "mentions": [],
+            "media": null
+        },
+        "referenced_tweets": null,
+        "user_info": {
+            "id": "111222333",
+            "username": "crypto_gems_finder",
+            "name": "💰 CRYPTO GEMS 💰",
+            "description": "Finding the next 1000x gems! DM for paid group!",
+            "verified": false,
+            "verified_type": null,
+            "created_at": "2024-11-20T00:00:00Z",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/default.jpg",
+            "url": null,
+            "protected": false,
+            "public_metrics": {
+                "followers_count": 200,
+                "following_count": 8000,
+                "tweet_count": 75000,
+                "listed_count": 0
+            },
+            "location": null
+        }
+    },
+    {
+        "id": "mock_twitter_004",
+        "text": "New research published on Bitcoin's role as inflation hedge. Data shows strong correlation with monetary expansion. Long-term holders continue accumulating despite short-term volatility. Full thread below 🧵",
+        "created_at": "2024-12-08T07:00:00Z",
+        "author_id": "444555666",
+        "conversation_id": "mock_twitter_004",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "in_reply_to_user_id": null,
+        "reply_settings": "everyone",
+        "source": "Twitter Web App",
+        "geo": null,
+        "public_metrics": {
+            "retweet_count": 2200,
+            "like_count": 6800,
+            "reply_count": 420,
+            "quote_count": 180
+        },
+        "context_annotations": [
+            {"domain": {"id": "131", "name": "Cryptocurrency"}, "entity": {"id": "1", "name": "Bitcoin"}},
+            {"domain": {"id": "66", "name": "Interests and Hobbies"}, "entity": {"id": "847", "name": "Finance"}}
+        ],
+        "entities": {
+            "hashtags": [],
+            "cashtags": [],
+            "urls": [],
+            "mentions": [],
+            "media": null
+        },
+        "referenced_tweets": null,
+        "user_info": { 
+            "id": "444555666", 
+            "username": "bitcoin_researcher",
+            "name": "BTC Research",
+            "description": "PhD Economics | Bitcoin researcher at major university | Academic publications on crypto",
+            "verified": true,
+            "verified_type": "blue", 
+            "created_at": "2015-01-10T00:00:00Z",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/btc_research.jpg",
+            "url": "https://university.edu/btc-research",
+            "protected": false,
+            "public_metrics": { 
+                "followers_count": 280000,
+                "following_count": 500,
+                "tweet_count": 12000,
+                "listed_count": 2000
+            },
+            "location": "Cambridge, MA"
+        }
+    }
+]

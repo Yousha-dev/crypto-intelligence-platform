@@ -1,0 +1,196 @@
+# Clean up existing setup
+docker-compose down -v
+#docker system prune -a -f --volumes
+
+#docker rmi fyp-backend:latest
+
+# docker-compose build app_base --no-cache
+
+# Start all services
+docker-compose up -d
+#docker exec -it api /bin/bash
+# docker-compose down
+
+# Check all services status
+# docker-compose ps
+
+# Navigate to src directory
+cd src
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py collectstatic --noinput
+
+python manage.py setup_content_system
+
+python manage.py clear_content --confirm
+
+python manage.py run_full_pipeline --content-type=all --max-items=100 --min-trust-score=4.0 --verbose 
+
+python manage.py verify_pipeline_processing --limit=5 --content-type=all
+
+python manage.py test_cross_verification --all --detailed
+
+ngrok http 8000 --inspect=false
+
+python manage.py runserver 0.0.0.0:8000 --noreload
+
+# Show debug info (model loading, versions)
+python manage.py test_sentiment --debug
+# Test with custom text
+python manage.py test_sentiment --text "Bitcoin is mooning! This is incredible! 🚀"
+# Run batch test with multiple samples
+python manage.py test_sentiment --batch
+
+
+# Test all components
+python manage.py test_integration --component all --verbose
+
+# Test credibility system specifically
+python manage.py test_credibility_system --action test_source_history
+python manage.py test_credibility_system --action test_cross_reference
+python manage.py test_credibility_system --action test_extremity
+python manage.py test_credibility_system --action test_all --sample-size 10
+# Test full pipeline (scoring + storage)
+python manage.py test_credibility_system --action test_full_pipeline --sample-size 20
+# Show statistics
+python manage.py test_credibility_system --action stats
+
+
+# Fetch all sources (news + social)
+python manage.py fetch_content --source all --sync
+# Fetch news only
+python manage.py fetch_content --source news --sync --max-items 20
+# Fetch social only
+python manage.py fetch_content --source social --sync --max-items 20
+# Fetch specific platforms
+python manage.py fetch_content --source news --platforms cryptopanic,coindesk --sync
+# Run comprehensive update (async via Celery)
+python manage.py fetch_content --comprehensive
+
+
+# Test with custom text
+python manage.py test_text_processing --text "Bitcoin hits $60k! @elonmusk bullish on BTC #crypto #moon"
+# Run full test
+python manage.py test_text_processing --full
+
+
+# Run all tests together(fit + trending + spikes + summary)
+python manage.py test_topic_modeling --all
+# Or run default (fit + trending + summary)
+python manage.py test_topic_modeling
+
+
+python manage.py test_hashtag_trending --all
+# Populate with sample data and show trending
+python manage.py test_hashtag_trending
+# Show sentiment correlation
+python manage.py test_hashtag_trending --sentiment
+# Get stats for specific hashtag
+python manage.py test_hashtag_trending --stats bitcoin
+
+
+python manage.py test_persist_trending --all
+# Persist and query
+python manage.py test_persist_trending
+# Cleanup old data
+python manage.py test_persist_trending --cleanup
+
+
+# Test all RAG components
+python manage.py test_rag_system --component all --verbose
+
+# Test specific components
+python manage.py test_rag_system --component embeddings --verbose
+python manage.py test_rag_system --component indexing --verbose
+python manage.py test_rag_system --component retrieval --verbose
+python manage.py test_rag_system --component generation --verbose
+python manage.py test_rag_system --component knowledge_graph --verbose
+python manage.py test_rag_system --component llm_providers --verbose
+python manage.py test_rag_system --component query_chains --verbose
+python manage.py test_rag_system --component context --verbose
+python manage.py test_rag_system --component postprocessor --verbose
+
+# Test with sample indexing (actually indexes test documents)
+python manage.py test_rag_system --component all --index-sample --verbose
+
+# Test without LLM (if no API keys configured)
+python manage.py test_rag_system --component all --skip-llm --verbose
+
+# Test specific content type
+python manage.py test_rag_system --component indexing --content-type news --verbose
+python manage.py test_rag_system --component indexing --content-type social --verbose
+
+
+1. Initialize the system:
+   python manage.py init_trading
+   python manage.py init_trading --reset --workers=3
+
+2. Run orchestrator:
+   # Run specific shard
+   python manage.py run_trading_orchestrator --shard-name=shard_0
+   
+   # Run backfill only
+   python manage.py run_trading_orchestrator --phase=backfill --shard-name=shard_0
+   
+   # Run streaming only
+   python manage.py run_trading_orchestrator --phase=stream --shard-name=shard_0
+   
+   # Run both phases (default)
+   python manage.py run_trading_orchestrator --phase=both --shard-name=shard_0
+   
+   # Dry run to see execution plan
+   python manage.py run_trading_orchestrator --dry-run --shard-name=shard_0
+   
+   # Limited series for testing
+   python manage.py run_trading_orchestrator --max-series=10 --phase=backfill --shard-name=shard_0
+
+3. System monitoring:
+   # Check status
+   python manage.py run_trading_orchestrator --status
+   
+   # List available shards  
+   python manage.py run_trading_orchestrator --list-shards
+
+4. Production deployment (Windows):
+   # Initialize system
+   python manage.py init_trading --workers=3
+   
+   # Run multiple orchestrator instances (different cmd windows)
+   start "Shard 0" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_0 --phase=both
+   start "Shard 1" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_1 --phase=both  
+   start "Shard 2" cmd /k python manage.py run_trading_orchestrator --shard-name=shard_2 --phase=both
+
+5. Production deployment (Linux/Unix):
+   # Initialize system
+   python manage.py init_trading --workers=3
+   
+   # Run multiple orchestrator instances (background processes)
+   python manage.py run_trading_orchestrator --shard-name=shard_0 --phase=both &
+   python manage.py run_trading_orchestrator --shard-name=shard_1 --phase=both &
+   python manage.py run_trading_orchestrator --shard-name=shard_2 --phase=both &
+
+6. Testing commands:
+   # Test with limited scope
+   python manage.py run_trading_orchestrator --shard-name=shard_0 --max-series=5 --dry-run
+   
+   # Test backfill only
+   python manage.py run_trading_orchestrator --shard-name=shard_0 --phase=backfill --max-series=2
+   
+   # Test streaming only (after backfill is complete)
+   python manage.py run_trading_orchestrator --shard-name=shard_0 --phase=stream
+
+7. Monitoring and debugging:
+   # Check what series each shard handles
+   python manage.py run_trading_orchestrator --list-shards
+   
+   # Check overall system status
+   python manage.py run_trading_orchestrator --status
+   
+   # View InfluxDB data
+   # Access InfluxDB UI at: http://localhost:8086
+   
+   # View Flower monitoring
+   # Access Flower UI at: http://localhost:5555

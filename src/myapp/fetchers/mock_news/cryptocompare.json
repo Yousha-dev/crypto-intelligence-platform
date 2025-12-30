@@ -1,0 +1,50 @@
+[
+    {
+        "id": "mock_cc_001",
+        "guid": "cryptocompare-btc-analysis-001",
+        "published_on": 1733652000,
+        "imageurl": "https://images.cryptocompare.com/news/default/btc.png",
+        "title": "Bitcoin Technical Analysis: Key Support at $95,000",
+        "url": "https://cryptocompare.com/news/mock/btc-analysis",
+        "source": "CryptoCompare",
+        "body": "Bitcoin is showing strong technical support at the $95,000 level. RSI indicators suggest the asset is neither overbought nor oversold, with healthy trading volumes supporting the current price action. Analysts expect consolidation before the next move.",
+        "tags": "BTC|Bitcoin|Analysis|Technical",
+        "categories": "BTC|Trading|Analysis",
+        "upvotes": "85",
+        "downvotes": "5",
+        "lang": "EN",
+        "source_info": {"name": "CryptoCompare", "lang": "EN", "img": "https://cryptocompare.com/logo.png"}
+    },
+    {
+        "id": "mock_cc_002",
+        "guid": "cryptocompare-eth-staking-002",
+        "published_on": 1733648400,
+        "imageurl": "https://images.cryptocompare.com/news/default/eth.png",
+        "title": "Ethereum Staking Rewards Attract Institutional Interest",
+        "url": "https://cryptocompare.com/news/mock/eth-staking",
+        "source": "CryptoCompare",
+        "body": "Institutional investors are increasingly interested in Ethereum staking rewards. With yields averaging 4-5% annually, ETH staking has become an attractive option for institutional portfolios seeking crypto exposure with yield generation.",
+        "tags": "ETH|Ethereum|Staking|Institutional",
+        "categories": "ETH|DeFi|Staking",
+        "upvotes": "72",
+        "downvotes": "3",
+        "lang": "EN",
+        "source_info": {"name": "CryptoCompare", "lang": "EN", "img": "https://cryptocompare.com/logo.png"}
+    },
+    {
+        "id": "mock_cc_003",
+        "guid": "cryptocompare-defi-protocols-003",
+        "published_on": 1733644800,
+        "imageurl": "https://images.cryptocompare.com/news/default/defi.png",
+        "title": "Top DeFi Protocols Report Record Revenue in Q4",
+        "url": "https://cryptocompare.com/news/mock/defi-revenue",
+        "source": "CryptoCompare",
+        "body": "Leading DeFi protocols including Uniswap, Aave, and Compound have reported record revenue figures for Q4 2024. The surge is attributed to increased trading activity and growing adoption of decentralized finance solutions.",
+        "tags": "DeFi|Uniswap|Aave|Revenue",
+        "categories": "DeFi|Markets",
+        "upvotes": "65",
+        "downvotes": "8", 
+        "lang": "EN",
+        "source_info": {"name": "CryptoCompare", "lang": "EN", "img": "https://cryptocompare.com/logo.png"}
+    }
+]

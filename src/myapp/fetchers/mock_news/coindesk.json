@@ -1,0 +1,44 @@
+[
+    {
+        "id": "mock_cd_001",
+        "title": "Bitcoin ETF Inflows Hit Record $1 Billion in Single Day",
+        "link": "https://coindesk.com/mock/btc-etf-inflows",
+        "published": "2024-12-08T12:00:00Z",
+        "summary": "Spot Bitcoin ETFs saw unprecedented inflows as institutional interest continues to surge. BlackRock's IBIT led the pack with $500 million in daily inflows, followed by Fidelity's FBTC with $300 million. Analysts suggest this trend indicates growing mainstream adoption.",
+        "description": "Spot Bitcoin ETFs saw unprecedented inflows as institutional interest continues to surge. BlackRock's IBIT led the pack with $500 million.",
+        "content": "Spot Bitcoin ETFs saw unprecedented inflows as institutional interest continues to surge. BlackRock's IBIT led the pack with $500 million in daily inflows, followed by Fidelity's FBTC with $300 million. Analysts suggest this trend indicates growing mainstream adoption.",
+        "url": "https://coindesk.com/mock/btc-etf-inflows",
+        "published_at": "2024-12-08T12:00:00Z",
+        "author": "Michael Chen",
+        "source": {"title": "CoinDesk"},
+        "media_content": [{"url": "https://coindesk.com/images/btc-etf.jpg"}]
+    },
+    {
+        "id": "mock_cd_002",
+        "title": "Ethereum Layer 2 Networks Process More Transactions Than Mainnet",
+        "link": "https://coindesk.com/mock/l2-milestone",
+        "published": "2024-12-08T10:00:00Z",
+        "summary": "Combined transaction volume on Arbitrum, Optimism, and Base now exceeds Ethereum mainnet, marking a significant milestone in scaling solutions. Layer 2 scaling solutions have reached a historic milestone as combined transaction volume now exceeds Ethereum mainnet.",
+        "description": "Combined transaction volume on Arbitrum, Optimism, and Base now exceeds Ethereum mainnet, marking a significant milestone in scaling solutions.",
+        "content": "Layer 2 scaling solutions have reached a historic milestone as combined transaction volume now exceeds Ethereum mainnet. This shift demonstrates the success of Ethereum's scaling roadmap and growing user adoption of L2 solutions.",
+        "url": "https://coindesk.com/mock/l2-milestone",
+        "published_at": "2024-12-08T10:00:00Z",
+        "author": "Sarah Johnson",
+        "source": {"title": "CoinDesk"},
+        "media_content": []
+    },
+    {
+        "id": "mock_cd_003",
+        "title": "DeFi Total Value Locked Reaches $150 Billion",
+        "link": "https://coindesk.com/mock/defi-tvl",
+        "published": "2024-12-08T08:00:00Z",
+        "summary": "Decentralized finance protocols have collectively locked $150 billion in assets, approaching previous all-time highs. The DeFi sector continues its recovery with total value locked reaching $150 billion across all protocols.",
+        "description": "Decentralized finance protocols have collectively locked $150 billion in assets, approaching previous all-time highs.",
+        "content": "The DeFi sector continues its recovery with total value locked reaching $150 billion across all protocols. Lending platforms and liquid staking derivatives lead the growth, with Lido, Aave, and MakerDAO dominating the market share.",
+        "url": "https://coindesk.com/mock/defi-tvl",
+        "published_at": "2024-12-08T08:00:00Z",
+        "author": "Alex Turner",
+        "source": {"title": "CoinDesk"},
+        "media_content": []
+    } 
+]

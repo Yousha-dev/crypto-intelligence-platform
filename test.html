@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete WebSocket Test Suite</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-success { background-color: #28a745; color: white; }
+        .btn-warning { background-color: #ffc107; color: black; }
+        .btn-danger { background-color: #dc3545; color: white; }
+        .btn-secondary { background-color: #6c757d; color: white; }
+        .btn-info { background-color: #17a2b8; color: white; }
+        .btn-dark { background-color: #343a40; color: white; }
+        
+        button:hover { opacity: 0.9; }
+        
+        .section {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+        }
+        
+        .section h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        #status { 
+            font-weight: bold; 
+            margin: 10px 0; 
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .status-connecting { background-color: #fff3cd; color: #856404; }
+        .status-connected { background-color: #d4edda; color: #155724; }
+        .status-error { background-color: #f8d7da; color: #721c24; }
+        .status-disconnected { background-color: #e2e3e5; color: #495057; }
+        
+        #messages { 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            height: 500px; 
+            overflow-y: auto; 
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+        }
+        .message { 
+            margin: 3px 0; 
+            padding: 2px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .price_update { color: #007bff; font-weight: bold; }
+        .series_status { color: #6610f2; font-weight: bold; }
+        .orchestrator_status { color: #6610f2; font-weight: bold; }
+        .connection { color: #28a745; font-weight: bold; }
+        .error { color: #dc3545; font-weight: bold; }
+        .echo { color: #6f42c1; }
+        .heartbeat { color: #6c757d; }
+        .portfolio_update { color: #fd7e14; font-weight: bold; }
+        .trade_update { color: #20c997; font-weight: bold; }
+        .historical_data { color: #6610f2; }
+        .system_metrics { color: #fd7e14; }
+        .worker_details { color: #28a745; }
+        .backfill_triggered { color: #17a2b8; }
+        .series_reset { color: #ffc107; }
+        
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .login-section {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .connection-info {
+            background-color: #d1ecf1;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        
+        .inline-form {
+            display: flex;
+            gap: 10px;
+            align-items: end;
+            margin: 10px 0;
+        }
+        
+        .inline-form .form-group {
+            margin-bottom: 0;
+            flex: 1;
+        }
+        
+        .user-id-input {
+            max-width: 100px;
+        }
+        
+        .worker-id-input {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔌 Complete WebSocket Test Suite</h1>
+        
+        <!-- Login Section -->
+        <div class="login-section">
+            <h3>🔐 Authentication</h3>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Enter your email" value="abcd@abcd.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" value="password123">
+            </div>
+            <div class="form-group">
+                <label for="token">JWT Token (or login to get one):</label>
+                <input type="text" id="token" placeholder="Paste your JWT token here or login to get one">
+            </div>
+            <button class="btn-primary" onclick="login()">🔑 Login & Get Token</button>
+            <button class="btn-secondary" onclick="clearToken()">🗑️ Clear Token</button>
+        </div>
+        
+        <!-- Connection Controls -->
+        <div class="controls-grid">
+            <!-- Price Stream Tests -->
+            <div class="section">
+                <h3>📈 Price Stream (OHLCV Data)</h3>
+                <button class="btn-success" onclick="testPriceStream()">Price/OHLCV Stream</button>
+                
+                <div class="inline-form">
+                    <div class="form-group">
+                        <label for="price-exchange">Exchange:</label>
+                        <select id="price-exchange">
+                            <option value="binance">Binance</option>
+                            <option value="bybit">Bybit</option>
+                            <option value="bitget">Bitget</option>
+                            <option value="okx">OKX</option>
+                            <option value="kucoin">KuCoin</option>
+                            <option value="mexc">MEXC</option>
+                            <option value="kraken">Kraken</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price-symbol">Symbol:</label>
+                        <select id="price-symbol">
+                            <option value="BTC/USDT">BTC/USDT</option>
+                            <option value="ETH/USDT">ETH/USDT</option>
+                            <option value="BNB/USDT">BNB/USDT</option>
+                            <option value="SOL/USDT">SOL/USDT</option>
+                            <option value="ADA/USDT">ADA/USDT</option>
+                            <option value="DOGE/USDT">DOGE/USDT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price-timeframe">Timeframe:</label>
+                        <select id="price-timeframe">
+                            <option value="1m">1m</option>
+                            <option value="5m" selected>5m</option>
+                            <option value="1h">1h</option>
+                            <option value="1d">1d</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="connection-info">
+                    Endpoint: <code>ws://localhost:8000/ws/prices/{exchange}/{symbol}/{timeframe}</code>
+                </div>
+            </div>
+
+            <!-- Series Status Tests -->
+            <div class="section">
+                <h3>Series Status Monitoring</h3>
+                <button class="btn-info" onclick="testSeriesStatus()">📈 Series Status</button>
+                
+                <div class="inline-form">
+                    <div class="form-group">
+                        <label for="series-exchange">Exchange:</label>
+                        <select id="series-exchange">
+                            <option value="binance">Binance</option>
+                            <option value="bybit">Bybit</option>
+                            <option value="bitget">Bitget</option>
+                            <option value="okx">OKX</option>
+                            <option value="kucoin">KuCoin</option>
+                            <option value="mexc">MEXC</option>
+                            <option value="kraken">Kraken</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="series-symbol">Symbol:</label>
+                        <select id="series-symbol">
+                            <option value="BTC/USDT">BTC/USDT</option>
+                            <option value="ETH/USDT">ETH/USDT</option>
+                            <option value="BNB/USDT">BNB/USDT</option>
+                            <option value="SOL/USDT">SOL/USDT</option>
+                            <option value="ADA/USDT">ADA/USDT</option>
+                            <option value="DOGE/USDT">DOGE/USDT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="series-timeframe">Timeframe:</label>
+                        <select id="series-timeframe">
+                            <option value="1m">1m</option>
+                            <option value="5m" selected>5m</option>
+                            <option value="1h">1h</option>
+                            <option value="1d">1d</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="connection-info">
+                    Endpoint: <code>ws://localhost:8000/ws/series/status/{exchange}/{symbol}/{timeframe}</code>
+                </div>
+            </div>
+            
+            <!-- Orchestrator Monitor Tests -->
+            <div class="section">
+                <h3>🎛️ Orchestrator Monitoring</h3>
+                <button class="btn-dark" onclick="testOrchestratorMonitor()">Orchestrator Monitor</button>
+                
+                <div class="inline-form">
+                    <div class="form-group worker-id-input">
+                        <label for="worker-id">Worker ID:</label>
+                        <input type="text" id="worker-id" placeholder="all" value="all">
+                    </div>
+                </div>
+                <div class="connection-info">
+                    Endpoint: <code>ws://localhost:8000/ws/orchestrator/monitor/{worker_id}</code><br>
+                    Use "all" to monitor all workers
+                </div>
+            </div>
+            <div class="section">
+                <h3>News Feed</h3>
+                <button class="btn-primary" onclick="testNewsFeed()">News Feed</button>
+                <div class="connection-info">
+                    Endpoint: <code>ws://localhost:8000/ws/news/feed</code>
+                </div>
+            </div>
+            <div class="section">
+                <h3>💬 News WorkFlow Monitor</h3>
+                <button class="btn-primary" onclick="FetchWorkflowConsumer()">💬 News WorkFlow Monitor</button>
+                <div class="connection-info">
+                    Endpoint: <code>ws://localhost:8000/ws/news/status</code>
+                </div>
+            </div>
+            <!-- Portfolio Tests -->
+            <div class="section">
+                <h3>💼 Portfolio Tests</h3>
+                <div class="inline-form">
+                    <div class="form-group user-id-input">
+                        <label for="portfolio-user-id">User ID:</label>
+                        <input type="text" id="portfolio-user-id" placeholder="2" value="2">
+                    </div>
+                    <button class="btn-info" onclick="testPortfolioStream()">💼 Portfolio Stream</button>
+                </div>
+                <div class="connection-info">
+                    Connects to: <code>ws://localhost:8000/ws/trading/portfolio/{user_id}?token={jwt}</code>
+                </div>
+            </div>
+            
+            <!-- Trading Tests -->
+            <div class="section">
+                <h3>💰 Trading Tests</h3>
+                <div class="inline-form">
+                    <div class="form-group user-id-input">
+                        <label for="trade-user-id">User ID:</label>
+                        <input type="text" id="trade-user-id" placeholder="2" value="2">
+                    </div>
+                    <button class="btn-success" onclick="testTradeStream()">📈 Trade Stream</button>
+                </div>
+                <div class="connection-info">
+                    Connects to: <code>ws://localhost:8000/ws/trading/trades/{user_id}?token={jwt}</code>
+                </div>
+            </div>
+             
+            <!-- Control Buttons -->
+            <div class="section">
+                <h3>🎮 Controls</h3>
+                <button class="btn-warning" onclick="sendPing()">🏓 Send Ping</button>
+                <button class="btn-warning" onclick="sendRefreshStatus()">🔄 Refresh Status</button>
+                <button class="btn-warning" onclick="sendTriggerBackfill()">🔄 Trigger Backfill</button>
+                <button class="btn-warning" onclick="sendResetSeries()">🗑️ Reset Series</button>
+                <button class="btn-info" onclick="requestHistoricalData()">Get Historical</button>
+                <button class="btn-danger" onclick="disconnect()">🔌 Disconnect</button>
+                <button class="btn-secondary" onclick="clearMessages()">🧹 Clear Messages</button>
+            </div>
+        </div>
+        
+        <!-- Status Display -->
+        <div id="status" class="status-disconnected">Not Connected</div>
+        
+        <!-- Messages Display -->
+        <h3>📨 Messages Log</h3>
+        <div id="messages"></div>
+    </div>
+    
+    <script>
+        let socket = null;
+        let currentTest = 'none';
+        let currentEndpoint = '';
+        
+        // Login function to get JWT token
+        async function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                addMessage('error', 'Please enter both email and password');
+                return;
+            }
+            
+            try {
+                addMessage('connection', 'Attempting to login...');
+                
+                const response = await fetch('http://localhost:8000/api/auth/login/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.access) {
+                    document.getElementById('token').value = data.access;
+                    addMessage('connection', 'Login successful! JWT token received and set.');
+                    addMessage('connection', `Token: ${data.access.substring(0, 50)}...`);
+                } else {
+                    addMessage('error', `Login failed: ${data.message || 'Invalid credentials'}`);
+                }
+            } catch (error) {
+                addMessage('error', `Login error: ${error.message}`);
+                console.error('Login error:', error);
+            }
+        }
+        
+        // Clear token
+        function clearToken() {
+            document.getElementById('token').value = '';
+            addMessage('connection', '🗑️ Token cleared');
+        }
+        
+        // Test price stream (OHLCV data)
+        function testPriceStream() {
+            const exchange = document.getElementById('price-exchange').value;
+            const symbol = document.getElementById('price-symbol').value;
+            const timeframe = document.getElementById('price-timeframe').value;
+            
+            disconnect();
+            clearMessages();
+            currentTest = 'price_stream';
+            currentEndpoint = `ws://localhost:8000/ws/prices/${exchange}/${symbol}/${timeframe}`;
+            updateStatus('connecting', `Connecting to ${exchange} ${symbol} ${timeframe} price stream...`);
+            
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('Price Stream');
+        }
+        
+        // Test series status monitoring
+        function testSeriesStatus() {
+            const exchange = document.getElementById('series-exchange').value;
+            const symbol = document.getElementById('series-symbol').value;
+            const timeframe = document.getElementById('series-timeframe').value;
+            
+            disconnect();
+            clearMessages();
+            currentTest = 'series_status';
+            currentEndpoint = `ws://localhost:8000/ws/series/status/${exchange}/${symbol}/${timeframe}`;
+            updateStatus('connecting', `Connecting to ${exchange} ${symbol} ${timeframe} series status...`);
+            
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('📈 Series Status');
+        }
+        
+        // Test orchestrator monitor
+        function testOrchestratorMonitor() {
+            const workerId = document.getElementById('worker-id').value || 'all';
+            
+            disconnect();
+            clearMessages();
+            currentTest = 'orchestrator_monitor';
+            currentEndpoint = `ws://localhost:8000/ws/orchestrator/monitor/${workerId}`;
+            updateStatus('connecting', `Connecting to orchestrator monitor (worker: ${workerId})...`);
+            
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('🎛️ Orchestrator Monitor');
+        }
+        
+        function testNewsFeed() {
+            disconnect();
+            clearMessages();
+            currentTest = 'news_feed';
+            currentEndpoint = `ws://localhost:8000/ws/news/feed`;
+            updateStatus('connecting', 'Connecting to news feed...');
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('News Feed');
+        }
+        function FetchWorkflowConsumer() {
+            disconnect();
+            clearMessages();
+            currentTest = 'news_workflow';
+            currentEndpoint = `ws://localhost:8000/ws/news/status`;
+            updateStatus('connecting', 'Connecting to news workflow...');
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('💬 News WorkFlow');
+        }
+        
+        // Test portfolio stream
+        function testPortfolioStream() {
+            const token = document.getElementById('token').value.trim();
+            const userId = document.getElementById('portfolio-user-id').value;
+            
+            if (!token) {
+                addMessage('error', 'Please enter a JWT token or login first');
+                return;
+            }
+            
+            if (!userId) {
+                addMessage('error', 'Please enter a user ID');
+                return;
+            }
+            
+            disconnect();
+            clearMessages();
+            currentTest = 'portfolio';
+            const cleanToken = token.replace(/^Bearer\s+/i, '');
+            currentEndpoint = `ws://localhost:8000/ws/trading/portfolio/${userId}?token=${cleanToken}`;
+            updateStatus('connecting', 'Connecting to portfolio stream...');
+            
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('💼 Portfolio Stream');
+        }
+        
+        // Test trade stream
+        function testTradeStream() {
+            const token = document.getElementById('token').value.trim();
+            const userId = document.getElementById('trade-user-id').value;
+            
+            if (!token) {
+                addMessage('error', 'Please enter a JWT token or login first');
+                return;
+            }
+            
+            if (!userId) {
+                addMessage('error', 'Please enter a user ID');
+                return;
+            }
+            
+            disconnect();
+            clearMessages();
+            currentTest = 'trades';
+            const cleanToken = token.replace(/^Bearer\s+/i, '');
+            currentEndpoint = `ws://localhost:8000/ws/trading/trades/${userId}?token=${cleanToken}`;
+            updateStatus('connecting', 'Connecting to trade stream...');
+            
+            socket = new WebSocket(currentEndpoint);
+            setupSocketHandlers('📈 Trade Stream');
+        }
+        
+        // Send ping
+        function sendPing() {
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                addMessage('error', 'Not connected. Please connect first.');
+                return;
+            }
+            
+            const pingMessage = {
+                type: 'ping',
+                timestamp: Date.now()
+            };
+            
+            socket.send(JSON.stringify(pingMessage));
+            addMessage('echo', `🏓 Sent ping: ${JSON.stringify(pingMessage)}`);
+        }
+        
+        // Send refresh status (for series status and orchestrator)
+        function sendRefreshStatus() {
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                addMessage('error', 'Not connected. Please connect first.');
+                return;
+            }
+            
+            const message = {
+                type: 'refresh_status',
+                timestamp: Date.now()
+            };
+            
+            socket.send(JSON.stringify(message));
+            addMessage('echo', `🔄 Sent refresh status: ${JSON.stringify(message)}`);
+        }
+        
+        // Send trigger backfill (for series status)
+        function sendTriggerBackfill() {
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                addMessage('error', 'Not connected. Please connect first.');
+                return;
+            }
+            
+            if (currentTest !== 'series_status') {
+                addMessage('error', 'Backfill trigger only works with Series Status endpoint');
+                return;
+            }
+            
+            const message = {
+                type: 'trigger_backfill',
+                timestamp: Date.now()
+            };
+            
+            socket.send(JSON.stringify(message));
+            addMessage('echo', `🔄 Sent trigger backfill: ${JSON.stringify(message)}`);
+        }
+        
+        // Send reset series (for series status)
+        function sendResetSeries() {
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                addMessage('error', 'Not connected. Please connect first.');
+                return;
+            }
+            
+            if (currentTest !== 'series_status') {
+                addMessage('error', 'Series reset only works with Series Status endpoint');
+                return;
+            }
+            
+            const message = {
+                type: 'reset_series',
+                timestamp: Date.now()
+            };
+            
+            socket.send(JSON.stringify(message));
+            addMessage('echo', `🗑️ Sent reset series: ${JSON.stringify(message)}`);
+        }
+        
+        // Request historical data
+        function requestHistoricalData() {
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                addMessage('error', 'Not connected. Please connect first.');
+                return;
+            }
+            
+            if (currentTest !== 'price_stream') {
+                addMessage('error', 'Historical data request only works with Price Stream endpoint');
+                return;
+            }
+            
+            const message = {
+                type: 'request_historical',
+                timeframe: document.getElementById('price-timeframe')?.value || '1h',
+                limit: 50,
+                timestamp: Date.now()
+            };
+            
+            socket.send(JSON.stringify(message));
+            addMessage('echo', `Requested historical data: ${JSON.stringify(message)}`);
+        }
+        
+        // Setup socket event handlers
+        function setupSocketHandlers(testType) {
+            addMessage('connection', `🔗 Connecting to: ${currentEndpoint}`);
+            
+            socket.onopen = function(e) {
+                updateStatus('connected', `Connected to ${testType}!`);
+                addMessage('connection', `🟢 WebSocket connected to ${testType}`);
+            };
+
+            socket.onmessage = function(event) {
+                try {
+                    const data = JSON.parse(event.data);
+                    const messageType = data.type || 'unknown';
+                    
+                    // Format message based on type
+                    let formattedMessage;
+                    
+                    switch (messageType) {
+                        case 'connection':
+                            formattedMessage = `🟢 Connected: ${data.exchange}/${data.symbol}/${data.timeframe}`;
+                            if (data.series_config) {
+                                formattedMessage += `\n   Backfill: ${data.series_config.backfill_completed ? '✅' : '⏳'}`;
+                                formattedMessage += `\n   Last TS: ${data.series_config.last_ts_ms ? new Date(data.series_config.last_ts_ms).toLocaleString() : 'None'}`;
+                            }
+                            break;
+                            
+                        case 'price_update':
+                            const priceData = data.data || {};
+                            formattedMessage = `💰 ${data.symbol} ${data.timeframe} @ ${new Date(priceData.timestamp || Date.now()).toLocaleTimeString()}`;
+                            if (priceData.open !== undefined) {
+                                formattedMessage += `\n   OHLCV: O=${priceData.open} H=${priceData.high} L=${priceData.low} C=${priceData.close} V=${priceData.volume}`;
+                                formattedMessage += `\n   Status: ${priceData.is_closed ? 'Closed' : '🔄 Forming'}`;
+                                if (priceData.remaining_ms) {
+                                    formattedMessage += ` (${Math.round(priceData.remaining_ms/1000)}s remaining)`;
+                                }
+                            }
+                            break;
+                            
+                        case 'historical_data':
+                            const candles = data.data || [];
+                            formattedMessage = `Historical: ${candles.length} candles for ${data.symbol}`;
+                            if (candles.length > 0) {
+                                const latest = candles[candles.length - 1];
+                                formattedMessage += `\n   Latest: ${new Date(latest.timestamp).toLocaleTimeString()} OHLCV=${latest.open},${latest.high},${latest.low},${latest.close},${latest.volume}`;
+                            }
+                            break;
+                            
+                        case 'requested_historical_data':
+                            formattedMessage = `Requested Historical: ${data.actual_count}/${data.requested_limit} candles for ${data.symbol} ${data.timeframe}`;
+                            if (data.message) {
+                                formattedMessage += `\n   ${data.message}`;
+                            }
+                            break;
+                            
+                        case 'series_status':
+                            const status = data.status || {};
+                            formattedMessage = `📈 Series Status: ${status.exchange}/${status.symbol}/${status.timeframe}`;
+                            formattedMessage += `\n   Health: ${status.health_status || 'unknown'}`;
+                            formattedMessage += `\n   Backfill: ${status.backfill_completed ? '✅' : '⏳'}`;
+                            formattedMessage += `\n   Data Age: ${status.data_age_hours ? Math.round(status.data_age_hours * 10) / 10 : '?'} hours`;
+                            if (status.last_error) {
+                                formattedMessage += `\n   Error: ${status.last_error}`;
+                            }
+                            break;
+                            
+                        case 'orchestrator_status':
+                            const sysStats = data.system_stats || {};
+                            const workers = data.workers || [];
+                            formattedMessage = `🎛️ System: ${sysStats.healthy_workers || 0}/${sysStats.total_workers || 0} workers healthy`;
+                            formattedMessage += `\n   Series: ${sysStats.completed_series || 0}/${sysStats.total_series || 0} completed (${Math.round(sysStats.completion_rate || 0)}%)`;
+                            formattedMessage += `\n   Health: ${sysStats.system_health || 'unknown'}`;
+                            workers.slice(0, 2).forEach(w => {
+                                formattedMessage += `\n   Worker ${w.worker_id}: ${w.is_healthy ? '✅' : '❌'} ${w.series_count} series`;
+                            });
+                            break;
+                            
+                        case 'system_metrics':
+                            const metrics = data.metrics || {};
+                            const sys = metrics.system || {};
+                            formattedMessage = `💻 System Metrics:`;
+                            formattedMessage += `\n   CPU: ${sys.cpu_percent || 0}%`;
+                            formattedMessage += `\n   Memory: ${sys.memory_percent || 0}% (${Math.round((sys.memory_used_gb || 0) * 10) / 10}GB)`;
+                            formattedMessage += `\n   InfluxDB: ${metrics.influxdb?.status || 'unknown'}`;
+                            break;
+                            
+                        case 'worker_details':
+                            const details = data.details || {};
+                            const seriesDetails = details.series_details || [];
+                            formattedMessage = `👤 Worker ${details.worker_id} (${details.shard_name})`;
+                            formattedMessage += `\n   Status: ${details.status}`;
+                            formattedMessage += `\n   Series: ${seriesDetails.length}`;
+                            seriesDetails.slice(0, 3).forEach(s => {
+                                formattedMessage += `\n   • ${s.series_key}: ${s.backfill_completed ? '✅' : '⏳'}`;
+                            });
+                            break;
+                            
+                        case 'backfill_triggered':
+                            formattedMessage = `🔄 Backfill Triggered: ${data.series_key}\n   ${data.message}`;
+                            break;
+                            
+                        case 'series_reset':
+                            formattedMessage = `🗑️ Series Reset: ${data.series_key}\n   ${data.message}`;
+                            break;
+                            
+                        case 'probe_reset':
+                            formattedMessage = `Probe Reset: ${data.series_key}\n   ${data.message}`;
+                            break;
+                            
+                        case 'health_check_triggered':
+                            formattedMessage = `🏥 Health Check: Task ${data.task_id}\n   ${data.message}`;
+                            break;
+                            
+                        case 'portfolio_update':
+                            const holdingsCount = data.holdings_count || 0;
+                            const exchangeCount = data.exchange_count || 0;
+                            formattedMessage = `💼 Portfolio: ${holdingsCount} holdings across ${exchangeCount} exchanges`;
+                            break;
+                            
+                        case 'trade_update':
+                            if (data.trade) {
+                                const trade = data.trade;
+                                formattedMessage = `📈 Trade: ${trade.symbol} ${trade.side} ${trade.amount} @ ${trade.price || 'Market'} [${trade.status}]`;
+                            } else {
+                                formattedMessage = JSON.stringify(data, null, 2);
+                            }
+                            break;
+                            
+                        case 'pong':
+                            formattedMessage = `🏓 Pong received (ping time: ${Date.now() - data.timestamp}ms)`;
+                            break;
+                            
+                        case 'error':
+                            formattedMessage = `Error: ${data.message || JSON.stringify(data)}`;
+                            break;
+                            
+                        default:
+                            formattedMessage = JSON.stringify(data, null, 2);
+                    }
+                    
+                    addMessage(messageType, formattedMessage);
+                } catch (error) {
+                    addMessage('error', `Failed to parse message: ${event.data}`);
+                }
+            };
+
+            socket.onclose = function(event) {
+                updateStatus('disconnected', `Disconnected: ${event.code}`);
+                addMessage('error', `🔴 Connection closed: ${event.code} - ${event.reason || 'No reason provided'}`);
+                
+                // Provide helpful error messages
+                switch (event.code) {
+                    case 1006:
+                        addMessage('error', '💡 Code 1006: Connection failed - check server status or endpoint');
+                        break;
+                    case 4000:
+                        addMessage('error', '💡 Code 4000: Invalid parameters - check exchange/symbol/timeframe');
+                        break;
+                    case 4004:
+                        addMessage('error', '💡 Code 4004: Series not configured');
+                        break;
+                    case 4005:
+                        addMessage('error', '💡 Code 4005: Series configuration error');
+                        break;
+                }
+            };
+
+            socket.onerror = function(error) {
+                updateStatus('error', 'Connection error occurred');
+                addMessage('error', 'WebSocket error occurred');
+                console.error('WebSocket error:', error);
+            };
+        }
+        
+        // Disconnect socket
+        function disconnect() {
+            if (socket) {
+                socket.close();
+                socket = null;
+                updateStatus('disconnected', 'Manually disconnected');
+                addMessage('connection', '🔌 Manually disconnected');
+            }
+        }
+        
+        // Clear messages
+        function clearMessages() {
+            document.getElementById('messages').innerHTML = '';
+        }
+        
+        // Update status display
+        function updateStatus(type, message) {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = message;
+            statusElement.className = `status-${type}`;
+        }
+        
+        // Add message to display
+        function addMessage(type, content) {
+            const messages = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            messageDiv.innerHTML = `<strong>[${timestamp}]</strong> ${content.replace(/\n/g, '<br>&nbsp;&nbsp;&nbsp;&nbsp;')}`;
+            
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        // Initialize
+        window.onload = function() {
+            addMessage('connection', '🚀 WebSocket Test Suite loaded for your actual endpoints.');
+            addMessage('connection', '📡 Available endpoints:');
+            addMessage('connection', '   • ws://localhost:8000/ws/prices/{exchange}/{symbol}/{timeframe} (Price/OHLCV stream)');
+            addMessage('connection', '   • ws://localhost:8000/ws/series/status/{exchange}/{symbol}/{timeframe} (Series status monitoring)');
+            addMessage('connection', '   • ws://localhost:8000/ws/orchestrator/monitor/{worker_id} (Orchestrator monitoring)');
+            addMessage('connection', '   • ws://localhost:8000/ws/trading/portfolio/{user_id}?token={jwt} (Portfolio stream)');
+            addMessage('connection', '   • ws://localhost:8000/ws/trading/trades/{user_id}?token={jwt} (Trade stream)');
+            addMessage('connection', '   • ws://localhost:8000/ws/news/feed (News feed)');
+            addMessage('connection', '   • ws://localhost:8000/ws/social/feed (Social feed)');
+            updateStatus('disconnected', 'Ready to test - Choose an endpoint above');
+        };
+    </script>
+</body>
+</html>

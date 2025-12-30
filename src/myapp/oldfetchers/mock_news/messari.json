@@ -1,0 +1,23 @@
+[
+    {
+        "id": "mock_messari_001",
+        "title": "Layer 2 Solutions See 400% Growth in Transaction Volume",
+        "content": "Layer 2 scaling solutions on Ethereum have experienced explosive growth, with transaction volumes increasing 400% year-over-year. Arbitrum and Optimism lead the market with combined daily transactions exceeding Ethereum mainnet.",
+        "references": ["https://messari.io/research/l2-growth"],
+        "reference_title": "Messari Research: Layer 2 Report",
+        "published_at": "2024-12-08T10:30:00Z",
+        "author": {"name": "Ryan Watkins"},
+        "tags": ["Layer2", "Scaling", "Ethereum", "Arbitrum", "Optimism"],
+        "url": "https://messari.io/mock/l2-growth"
+    },
+    { 
+        "id": "mock_messari_002",
+        "title": "NFT Market Shows Signs of Recovery with Gaming Focus",
+        "content": "The NFT market is showing signs of recovery after a prolonged downturn, with gaming-focused NFTs leading the resurgence. Play-to-earn games and digital collectibles are driving renewed interest in the space.",
+        "references": ["https://messari.io/research/nft-recovery"],
+        "published_at": "2024-12-08T08:00:00Z",
+        "author": {"name": "Mason Nystrom"},
+        "tags": ["NFT", "Gaming", "P2E", "Digital Collectibles"],
+        "url": "https://messari.io/mock/nft-recovery"
+    }
+]

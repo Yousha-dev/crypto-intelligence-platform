@@ -1,0 +1,144 @@
+[
+    {
+        "id": "mock_reddit_001",
+        "title": "Bitcoin Technical Analysis - Strong Support at $95K, Resistance at $105K",
+        "selftext": "Looking at the BTC daily chart, we have strong support forming at $95,000 with resistance at $105,000. RSI is showing oversold conditions which historically has been a good accumulation zone. Volume profile suggests institutional buying. MACD crossover imminent. What are your thoughts on the current setup?",
+        "url": "https://reddit.com/r/cryptocurrency/mock_001",
+        "permalink": "/r/CryptoCurrency/comments/mock_001/bitcoin_technical_analysis",
+        "subreddit": "CryptoCurrency",
+        "author": "crypto_analyst_pro",
+        "created_utc": 1733652000,
+        "score": 1250,
+        "upvote_ratio": 0.94,
+        "num_comments": 230, 
+        "gilded": 2,
+        "total_awards_received": 5,
+        "is_self": true,
+        "is_video": false,
+        "over_18": false,
+        "spoiler": false,
+        "stickied": false,
+        "locked": false,
+        "link_flair_text": "ANALYSIS",
+        "domain": "self.CryptoCurrency",
+        "author_info": {
+            "exists": true,
+            "account_age_days": 1500,
+            "link_karma": 25000,
+            "comment_karma": 60000,
+            "total_karma": 85000,
+            "is_verified": false,
+            "has_verified_email": true,  
+            "is_gold": true,
+            "is_mod": true
+        },
+        "subreddit_info": {
+            "name": "CryptoCurrency",
+            "subscribers": 6500000,
+            "created_utc": 1284738600,
+            "credibility_factors": {
+                "crypto_focused": true,
+                "large_community": true,
+                "established": true
+            }
+        }
+    },
+    {
+        "id": "mock_reddit_002",
+        "title": "Ethereum 2.0 Staking Guide - Everything You Need to Know",
+        "selftext": "Complete guide to staking ETH in 2024. Covers solo staking, staking pools, and liquid staking options like Lido. Current APY ranges from 4-5%. Here's what you need to consider before staking your ETH.",
+        "url": "https://reddit.com/r/ethereum/mock_002",
+        "permalink": "/r/ethereum/comments/mock_002/eth_staking_guide",
+        "subreddit": "ethereum",
+        "author": "eth_educator",
+        "created_utc": 1733648400,
+        "score": 890,
+        "upvote_ratio": 0.96,
+        "num_comments": 145,
+        "total_awards_received": 3,
+        "is_self": true,
+        "link_flair_text": "Education",
+        "author_info": {
+            "exists": true,
+            "account_age_days": 2000,
+            "link_karma": 15000,
+            "comment_karma": 35000,
+            "total_karma": 50000,
+            "is_gold": false,
+            "is_mod": false
+        },
+        "subreddit_info": {
+            "name": "ethereum",
+            "subscribers": 2500000,
+            "credibility_factors": {
+                "crypto_focused": true,
+                "large_community": true,
+                "established": true
+            }
+        }
+    },
+    {
+        "id": "mock_reddit_003",
+        "title": "🚀🚀🚀 THIS COIN WILL 1000X GUARANTEED!!! BUY NOW!!! 🚀🚀🚀",
+        "selftext": "Trust me bro just buy now before its too late! My uncle works at crypto and said this will moon! Don't miss out! DM me for the contract address! This is financial advice!!!",
+        "url": "https://reddit.com/r/cryptomoonshots/mock_003",
+        "permalink": "/r/cryptomoonshots/comments/mock_003/scam_post",
+        "subreddit": "cryptomoonshots",
+        "author": "moonshot_king_2024",
+        "created_utc": 1733644800,
+        "score": 15,
+        "upvote_ratio": 0.35,
+        "num_comments": 80,
+        "total_awards_received": 0,
+        "is_self": true,
+        "author_info": {
+            "exists": true,
+            "account_age_days": 5,
+            "link_karma": 5,
+            "comment_karma": 20,
+            "total_karma": 25,
+            "is_gold": false,
+            "is_mod": false
+        },
+        "subreddit_info": {
+            "name": "cryptomoonshots",
+            "subscribers": 150000,
+            "credibility_factors": {
+                "crypto_focused": true,
+                "large_community": false,
+                "established": false
+            }
+        }
+    },
+    {
+        "id": "mock_reddit_004",
+        "title": "DeFi Yield Farming Strategies for 2025",
+        "selftext": "Comprehensive breakdown of sustainable yield farming strategies. Covers risk management, impermanent loss mitigation, and portfolio diversification across multiple chains. Focus on battle-tested protocols only.",
+        "url": "https://reddit.com/r/defi/mock_004",
+        "permalink": "/r/defi/comments/mock_004/yield_farming",
+        "subreddit": "defi",
+        "author": "defi_researcher",
+        "created_utc": 1733641200,
+        "score": 520,
+        "upvote_ratio": 0.91,
+        "num_comments": 89,
+        "total_awards_received": 2,
+        "is_self": true,
+        "link_flair_text": "Strategy",
+        "author_info": {
+            "exists": true,
+            "account_age_days": 900,
+            "total_karma": 25000,
+            "is_mod": false
+        },
+        "subreddit_info": {
+            "name": "defi",
+            "subscribers": 800000,
+            "credibility_factors": {
+                "crypto_focused": true,
+                "large_community": true,
+                "established": true
+            }
+        }
+    }
+]

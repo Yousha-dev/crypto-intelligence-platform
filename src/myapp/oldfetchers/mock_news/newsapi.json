@@ -1,0 +1,31 @@
+[
+    {
+        "source": {"id": "reuters", "name": "Reuters"},
+        "author": "Tom Wilson",
+        "title": "Global Banks Explore Cryptocurrency Custody Services",
+        "description": "Major global banks are developing cryptocurrency custody solutions to meet growing institutional demand for digital asset services.",
+        "url": "https://reuters.com/mock/banks-crypto-custody",
+        "urlToImage": "https://images.reuters.com/crypto-custody.jpg",
+        "publishedAt": "2024-12-08T11:00:00Z",
+        "content": "Major global banks including JPMorgan, Goldman Sachs, and Bank of America are developing cryptocurrency custody solutions. The move comes as institutional investors increasingly demand regulated digital asset services from traditional financial institutions."
+    },
+    { 
+        "source": {"id": "forbes", "name": "Forbes"},
+        "author": "Maria Santos",
+        "title": "Cryptocurrency Market Cap Surpasses $3 Trillion Milestone",
+        "description": "The total cryptocurrency market capitalization has exceeded $3 trillion for the first time, driven by Bitcoin's rally and altcoin growth.",
+        "url": "https://forbes.com/mock/crypto-3-trillion",
+        "urlToImage": "https://images.forbes.com/crypto-marketcap.jpg",
+        "publishedAt": "2024-12-08T09:00:00Z",
+        "content": "The cryptocurrency market has reached a historic milestone with total market capitalization exceeding $3 trillion. Bitcoin accounts for approximately 55% of the total market, while Ethereum and other altcoins have also seen significant gains."
+    },
+    {
+        "source": {"id": "cnbc", "name": "CNBC"},
+        "author": "Kate Rooney",
+        "title": "Federal Reserve Comments Impact Crypto Markets",
+        "description": "Federal Reserve Chair Powell's comments on interest rates have influenced cryptocurrency market sentiment.",
+        "url": "https://cnbc.com/mock/fed-crypto-impact",
+        "publishedAt": "2024-12-08T07:30:00Z",
+        "content": "Federal Reserve Chair Jerome Powell's latest comments on monetary policy have had a notable impact on cryptocurrency markets. Bitcoin initially dropped 3% following hawkish remarks but recovered as investors digested the full statement."
+    }
+]
