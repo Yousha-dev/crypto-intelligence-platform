@@ -56,7 +56,7 @@ The cryptocurrency market is characterized by extreme volatility and information
 - Knowledge graph augmentation for contextual responses
 
 ### 4. **Semantic Knowledge Graph**
-- 5,000+ crypto entities mapped (coins, exchanges, people, regulators)
+- 500+ crypto entities mapped (coins, exchanges, people, regulators)
 - Relationship reasoning and path-finding
 - Dynamic updates based on market events
 - Entity types: Cryptocurrencies (BTC, ETH), Exchanges (Binance, Coinbase), People (CZ, Vitalik), Regulators (SEC, CFTC)
@@ -187,7 +187,7 @@ Content is automatically categorized into moderation tiers:
 ### 3. Knowledge Graph Layer
 
 **Semantic Entity Mapping**
-- Maintains a graph database with 5,000+ entities and their relationships
+- Maintains a graph database with 500+ entities and their relationships
 - Entity types include: Cryptocurrencies (BTC, ETH), Exchanges (Binance, Coinbase), People (CZ, Vitalik Buterin), Regulators (SEC, CFTC)
 - Relationships tracked: "founded_by", "regulated_by", "competes_with", "invested_in", etc.
 - Automatically updates based on news events and market developments
@@ -324,7 +324,7 @@ ws.onmessage = function(event) {
 
 ## 📚 REST API Documentation
 
-The platform provides a comprehensive REST API with over 100 endpoints organized into logical categories:
+The platform provides a comprehensive REST API with over 50 endpoints organized into logical categories:
 
 ### Authentication & User Management
 
